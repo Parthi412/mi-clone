@@ -96,7 +96,7 @@ function Footer() {
                     <br></br>
                     <div style={{border:"2px solid black"}}>
                         <h2>Get the Mi on Your hand</h2>
-                        <img src='https://i03.appmifile.com/32_operator_in/22/11/2022/9b4d58f78a203b82a56bdd11692d4ba1.png?thumb=1&w=80&f=webp&q=85'></img>
+                        <img src='https://i03.appmifile.com/32_operator_in/22/11/2022/9b4d58f78a203b82a56bdd11692d4ba1.png?thumb=1&w=80&f=webp&q=85' alt='footer'></img>
                         <Link><a href='https://in.event.mi.com/in/install-mi-store'>Click here to download</a></Link>
 
                         
