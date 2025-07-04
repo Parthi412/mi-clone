@@ -1,0 +1,150 @@
+#app {
+  height: 100%;
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  font-family:
+    Helvetica Neue,
+    Helvetica,
+    Arial,
+    sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  height: 700px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.lern{
+  position: relative;
+  left: 150px;
+  animation-name: bton;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  visibility: hidden;
+
+
+
+}
+@keyframes bton {
+  0%{
+    transform: translateY(30px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+  
+}
+.but img:hover{
+    transition: all 1s;
+  transform: scale(1.03);
+}
+.but:hover .lern{
+    visibility: visible;
+
+}
+.but{
+  height: 450px;
+}
+.watch{
+  background-image: url('https://i02.appmifile.com/mi-com-product/fly-birds/redmi-watch-move/inpc/46de65e54a68cdead122897872ea2419.png?f=webp');
+  background-repeat: no-repeat;
+}
+.mobile h1{
+  text-align: center;
+}
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .card.but {
+    margin-bottom: 20px;
+    height: 200px;
+  }
+
+  .watch {
+    height: auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .watch h1,
+  .watch p,
+  .watch h3 {
+    position: static !important;
+    margin: 10px 0;
+  }
+
+  .container h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .btn {
+    font-size: 1rem;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .col-6 {
+    width: 100%;
+  }
+
+  .btn-primary {
+    position: static !important;
+    display: block;
+    margin: 10px auto;
+  }
+
+  p {
+    position: static !important;
+    text-align: center;
+  }
+}
+
+/* Phones (max-width: 480px) */
+@media (max-width: 480px) {
+  .card-body h2 {
+    font-size: 1.2rem;
+  }
+
+  .lern {
+    font-size: 0.9rem;
+    width: 100%;
+  }
+
+  .watch {
+    font-size: 0.9rem;
+  }
+
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+ 
