@@ -1,8 +1,7 @@
-import logo from './logo.svg';
 import Home from './nav/Home';
 import Nav from './nav/Nav';
-import { BrowserRouter,Routes,Route, Router } from 'react-router-dom';
-import Store from './nav/Store';
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
+// import Store from './nav/Store';
 import Footer from './nav/Footer';
 import Login from './nav/Login';
 import Mobile from './nav/Mobile';

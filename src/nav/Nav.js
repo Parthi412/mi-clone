@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Nav.css'
-import { Swiper, SwiperSlide } from 'swiper/react';
+// import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Navigation } from 'swiper/modules';
+// import { Navigation } from 'swiper/modules';
 
 
 function Nav() {
@@ -19,7 +19,7 @@ function Nav() {
     <section>
       <div className='container'>
         <nav class="navbar navbar-text fs-5">
-          <Link><img className='im' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSst1WVeTPp5nj1IMKnoboJjJsGyIOvEAgA9w&s' style={{width:"50px"}}></img></Link>
+          <Link><img className='im' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSst1WVeTPp5nj1IMKnoboJjJsGyIOvEAgA9w&s' style={{width:"50px"}} alt='logo'></img></Link>
           <Link className='one' to="/home">Store</Link>
           <Link className='one' to='mobile'>Mobile Phone</Link>
           <Link className='one' to='/tablets'>Tablte's</Link>

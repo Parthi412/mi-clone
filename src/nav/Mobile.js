@@ -3,11 +3,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import './Mob.css'
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { addCart } from './Crete';
 
-import { Pagination, Navigation } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 
 
 function Mobile() {
@@ -44,7 +44,7 @@ function Mobile() {
         price: "15,000",
         img: "https://i03.appmifile.com/201_item_in/17/12/2024/0321927c81d71d28eb19b7ac43b4c86d.png?thumb=1&w=500&f=webp&q=85"
     }]
-const MobileData=useSelector((state)=>state.cart.CartItem)
+// const MobileData=useSelector((state)=>state.cart.CartItem)
 const dis=useDispatch()
 
 const add=(bag)=>{
@@ -61,8 +61,8 @@ const add=(bag)=>{
                     <div className='row'>
                         <div className='col'>
                             <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-                                <SwiperSlide><img src='https://i03.appmifile.com/749_operator_in/02/05/2025/d48cdcc6f8cdcb9a11b0438dc3b76eb5.png?thumb=1&w=2560&f=webp&q=85'></img></SwiperSlide>
-                                <SwiperSlide><img src='https://i03.appmifile.com/305_operator_in/21/05/2025/007480688b7bb8dc0e86c3b40ed2ee2c.png?thumb=1&w=2560&f=webp&q=85'></img></SwiperSlide>
+                                <SwiperSlide><img src='https://i03.appmifile.com/749_operator_in/02/05/2025/d48cdcc6f8cdcb9a11b0438dc3b76eb5.png?thumb=1&w=2560&f=webp&q=85' alt='mobile'></img></SwiperSlide>
+                                <SwiperSlide><img src='https://i03.appmifile.com/305_operator_in/21/05/2025/007480688b7bb8dc0e86c3b40ed2ee2c.png?thumb=1&w=2560&f=webp&q=85' alt='mobile'></img></SwiperSlide>
                             </Swiper>
                         </div>
                     </div>
@@ -77,7 +77,7 @@ const add=(bag)=>{
                             {mobile.map((bag) => (
                                 <div className='col-6  lap' key={bag.id} style={{ marginRight: "20px" }}>
                                     <h2 style={{ color: "white", textAlign: "center", marginTop: "100px" }}>{bag.tittle}</h2>
-                                    <img style={{ borderRadius: "140px", height: "400px", width: "400px", position: "relative", left: "110px" }} src={bag.img}></img>
+                                    <img style={{ borderRadius: "140px", height: "400px", width: "400px", position: "relative", left: "110px" }} src={bag.img} alt='mobile'></img>
                                     <br></br>
                                     <br></br>
                                     <h4>{bag.price}</h4>
@@ -103,7 +103,7 @@ const add=(bag)=>{
                                 redmi.map((bag) => (
                                     <div className='col lap' key={bag.id} style={{ marginRight: "20px" }}>
                                         <h1 style={{ color: "white", textAlign: "center", marginTop: "100px" }}>{bag.tittle}</h1>
-                                        <img style={{ borderRadius: "140px", height: "400px", width: "400px", position: "relative", left: "110px" }} src={bag.img}></img>
+                                        <img style={{ borderRadius: "140px", height: "400px", width: "400px", position: "relative", left: "110px" }} src={bag.img} alt='mobile'></img>
                                         <br></br>
                                         <br></br>
                                         <h4>{bag.price}</h4>

@@ -2,7 +2,7 @@ import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { Pagination, Navigation } from 'swiper/modules';
+import {  Navigation } from 'swiper/modules';
 function Tv() {
     const mobile = [{
         id: "1",
@@ -48,8 +48,8 @@ function Tv() {
                     <div className='row'>
                         <div className='col'>
                             <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-                                <SwiperSlide><img src='https://i03.appmifile.com/362_operator_in/15/05/2025/c4b0e22a0f3cf1146c05d84da2e6e1be.jpg?thumb=1&w=2560&f=webp&q=85'></img></SwiperSlide>
-                                <SwiperSlide><img src='https://i03.appmifile.com/249_operator_in/15/05/2025/fc37f38f293ec198ca906762911709b7.jpg?thumb=1&w=2560&f=webp&q=85'></img></SwiperSlide>
+                                <SwiperSlide><img src='https://i03.appmifile.com/362_operator_in/15/05/2025/c4b0e22a0f3cf1146c05d84da2e6e1be.jpg?thumb=1&w=2560&f=webp&q=85' alt='tv'></img></SwiperSlide>
+                                <SwiperSlide><img src='https://i03.appmifile.com/249_operator_in/15/05/2025/fc37f38f293ec198ca906762911709b7.jpg?thumb=1&w=2560&f=webp&q=85' alt='tv'></img></SwiperSlide>
                             </Swiper>
                         </div>
                     </div>
@@ -67,7 +67,7 @@ function Tv() {
                             {mobile.map((bag) => (
                                 <div className='col-6  lap' key={bag.id} style={{ marginRight: "20px" }}>
                                     <h1 style={{ color: "white", textAlign: "center", marginTop: "100px", }}>{bag.tittle}</h1>
-                                    <img style={{ borderRadius: "140px", height: "400px", width: "400px", position: "relative", left: "110px" }} src={bag.img}></img>
+                                    <img style={{ borderRadius: "140px", height: "400px", width: "400px", position: "relative", left: "110px" }} src={bag.img} alt='tv'></img>
                                     <br></br>
                                     <br></br>
                                     <h4>{bag.price}</h4>
@@ -95,7 +95,7 @@ function Tv() {
                                 redmi.map((bag) => (
                                     <div className='col lap' key={bag.id} style={{ marginRight: "20px" }}>
                                         <h1 style={{ color: "white", textAlign: "center", marginTop: "100px" }}>{bag.tittle}</h1>
-                                        <img style={{ borderRadius: "140px", height: "400px", width: "400px", position: "relative", left: "110px" }} src={bag.img}></img>
+                                        <img style={{ borderRadius: "140px", height: "400px", width: "400px", position: "relative", left: "110px" }} src={bag.img} alt='tv'></img>
                                         <br></br>
                                         <br></br>
                                         <h4>{bag.price}</h4>
