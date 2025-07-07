@@ -6,7 +6,6 @@ import 'swiper/css/navigation';
 // import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { addCart } from './Crete';
-
 import { Navigation } from 'swiper/modules';
 
 
@@ -116,9 +115,7 @@ const add=(bag)=>{
                 </section>
                 <br></br>
                 <br></br>
-            
         </div>
     )
 }
-
 export default Mobile

@@ -10,6 +10,7 @@ const MobileData=useSelector((state)=>state.cart.CartItem)
 
   return (
     <div>
+      
         {
             MobileData.map((bag)=>(
                 <div key={bag.id}>

@@ -66,6 +66,10 @@ img {
     position: static !important;
     margin-top: 10px;
   }
+  .mySwiper {
+    visibility: hidden;
+  
+  }
 }
 
 /* Mobile */
