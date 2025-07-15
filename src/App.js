@@ -22,8 +22,11 @@ function App() {
         <Route path='/Tv' element={<Tv></Tv>}/>
         <Route path='/car' element={<Show></Show>} />
       </Routes>
+      
       <Footer />
+      
     </BrowserRouter>
+    
     </div>
   );
 }

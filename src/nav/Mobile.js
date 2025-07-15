@@ -5,41 +5,41 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 // import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { addCart } from './Crete';
+import { addCart} from './Crete';
 import { Navigation } from 'swiper/modules';
 
 
 function Mobile() {
     const mobile = [{
         id: "1",
-        tittle: "Xiaomi 15 Ultra",
+        title: "Xiaomi 15 Ultra",
         price: "$1,09,9999",
         img: "https://i03.appmifile.com/305_item_in/11/03/2025/2d4702802a20bba096cbe741814ae87b.png?thumb=1&w=500&f=webp&q=85"
 
     }, {
         id: "2",
-        tittle: "Xiaomi 14 Ultr",
+        title: "Xiaomi 14 Ultr",
         price: "$80,000",
         img: "https://i03.appmifile.com/329_item_in/11/04/2025/2a9e8ffe9a3772b764bc3b9cb4e83576.png?thumb=1&w=500&f=webp&q=85"
     }, {
         id: "3",
-        tittle: "Xiaomi 14 CIVI",
+        title: "Xiaomi 14 CIVI",
         price: "$50,000",
         img: "https://i03.appmifile.com/327_item_in/06/08/2024/784824caf4ebe3e6cef22a2c34de5e66.jpg?thumb=1&w=500&f=webp&q=85"
     },]
     const redmi = [{
-        id: "1",
-        tittle: "Redmi Note 14 Pro+ 5G",
+        id: "4",
+        title: "Redmi Note 14 Pro+ 5G",
         price: "20,000",
         img: "https://i03.appmifile.com/942_item_in/17/12/2024/35ce3d67c8df46482bcf534c9339e578.png?thumb=1&w=500&f=webp&q=85"
     }, {
-        id: "2",
-        tittle: "Redmi Note 14 Pro 5",
+        id: "5",
+        title: "Redmi Note 14 Pro 5",
         price: "15,000",
         img: "https://i03.appmifile.com/201_item_in/17/12/2024/0321927c81d71d28eb19b7ac43b4c86d.png?thumb=1&w=500&f=webp&q=85"
     }, {
-        id: "3",
-        tittle: "Redmi Note 14 Pro 5",
+        id: "6",
+        title: "Redmi Note 14 Pro 5",
         price: "15,000",
         img: "https://i03.appmifile.com/201_item_in/17/12/2024/0321927c81d71d28eb19b7ac43b4c86d.png?thumb=1&w=500&f=webp&q=85"
     }]
@@ -106,7 +106,7 @@ const add=(bag)=>{
                                         <br></br>
                                         <br></br>
                                         <h4>{bag.price}</h4>
-                                        <button style={{ position: "relative", top: "-15px", left: "270px" }} className='btn btn-dark'>Buy now</button>
+                                        <button style={{ position: "relative", top: "-15px", left: "270px" }} onClick={()=>add(bag)} className='btn btn-dark'>Buy now</button>
                                     </div>
                                 ))
                             }

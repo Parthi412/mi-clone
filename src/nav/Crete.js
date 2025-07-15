@@ -21,96 +21,25 @@ reducers:{
                 id:newproduct.id,
                 title:newproduct.title,
                 img:newproduct.img,
+                price:newproduct.price,
                 quantity:1
 
             })
         }
         localStorage.setItem("cart",JSON.stringify(state.CartItem))
 
+    },
+    deleteTocart(state,action){
+        const idTodel=action.payload
+        state.CartItem=state.CartItem.filter(item =>item.id!==idTodel)
+            localStorage.setItem("cart", JSON.stringify(state.CartItem));
+
+
     }
 
 }
 })
+localStorage.clear()
+
 export default product.reducer
-export const{addCart}=product.actions
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import { createSlice } from "@reduxjs/toolkit";
-
-// // ✅ Safe localStorage parser
-// let parsedCart = [];
-// try {
-//   const raw = localStorage.getItem("cart");
-//   const parsed = raw ? JSON.parse(raw) : [];
-//   parsedCart = Array.isArray(parsed) ? parsed : [];
-// } catch {
-//   parsedCart = [];
-// }
-
-// // ✅ Initial state with valid array
-// const initialState = {
-//   CartItem: parsedCart
-// };
-
-// const product = createSlice({
-//   name: "cart",
-//   initialState,
-//   reducers: {
-//     addCart(state, action) {
-//       const newProduct = action.payload;
-
-//       // ✅ Ensure CartItem is an array (defensive check)
-//       if (!Array.isArray(state.CartItem)) {
-//         state.CartItem = [];
-//       }
-
-//       const existing = state.CartItem.find(
-//         (item) => item.id === newProduct.id
-//       );
-
-//       if (existing) {
-//         existing.quantity += 1;
-//       } else {
-//         state.CartItem.push({
-//           id: newProduct.id,
-//           title: newProduct.title, // ✅ use 'title' not 'tittle'
-//           img: newProduct.img,
-//           quantity: 1
-//         });
-//       }
-
-//       // ✅ Save updated cart to localStorage
-//       localStorage.setItem("cart", JSON.stringify(state.CartItem));
-//     }
-//   }
-// });
-
-// export default product.reducer;
-// export const { addCart } = product.actions;
+export const{addCart,deleteTocart}=product.actions
