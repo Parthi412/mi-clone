@@ -1,150 +1,162 @@
-#app {
-  height: 100%;
-}
-html,
-body {
-  position: relative;
-  height: 100%;
-}
-
-body {
-  font-family:
-    Helvetica Neue,
-    Helvetica,
-    Arial,
-    sans-serif;
-  font-size: 14px;
+/* === GLOBAL RESET === */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
-
-.swiper {
-  width: 100%;
-  height: 100%;
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
 }
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  height: 700px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.swiper-slide img {
+img {
+  max-width: 100%;
   display: block;
+}
+
+/* === SWIPER === */
+.mySwiper img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
 }
-.lern{
-  position: relative;
-  left: 150px;
-  animation-name: bton;
-  animation-duration: 1.5s;
-  animation-iteration-count: infinite;
-  visibility: hidden;
 
+/* === SECTION HEADINGS === */
+h1, h2 {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.offer {
+  margin: 40px 0 20px;
+  font-size: 2rem;
+  color: #e91e63;
+}
 
-
+/* === CARD SECTION (XIAOMI OFFERINGS) === */
+.but {
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-@keyframes bton {
-  0%{
-    transform: translateY(30px);
-  }
-  100%{
-    transform: translateY(0px);
-  }
-  
+.but:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
-.but img:hover{
-    transition: all 1s;
-  transform: scale(1.03);
-}
-.but:hover .lern{
-    visibility: visible;
-
-}
-.but{
-  height: 450px;
-}
-.watch{
-  background-image: url('https://i02.appmifile.com/mi-com-product/fly-birds/redmi-watch-move/inpc/46de65e54a68cdead122897872ea2419.png?f=webp');
-  background-repeat: no-repeat;
-}
-.mobile h1{
+.card-body {
+  padding: 20px;
   text-align: center;
 }
-/* Tablets (max-width: 768px) */
+.lern {
+  margin-top: 10px;
+  width: 100%;
+  font-weight: bold;
+}
+
+/* === NEW LAUNCH (WATCH) === */
+.watch {
+  background-color: #222;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  background-image: url('https://i02.appmifile.com/mi-com-product/fly-birds/redmi-note-13-pro-plus-5g/pc/56b5ea2f058b5c33f5d5a6c6d09ca5c0.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+.watch h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+.watch p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.watch h3 {
+  text-decoration: line-through;
+  color: #f8f8f8;
+  font-size: 1.5rem;
+}
+.watch h1:last-of-type {
+  color: #ffcc00;
+  font-size: 2.5rem;
+}
+
+/* === SERVICE SECTION === */
+.service {
+  padding: 20px;
+}
+.service img {
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.service p {
+  text-align: justify;
+}
+
+/* === FOOTER & SPACING === */
+section {
+  margin: 40px 0;
+}
+
+/* === MEDIA QUERIES === */
+
+/* Tablet (768px and below) */
 @media (max-width: 768px) {
-  .card.but {
-    margin-bottom: 20px;
-    height: 200px;
+  .col-4, .col-12, .col {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 30px;
   }
 
   .watch {
     height: auto;
-    padding: 20px;
-    text-align: center;
+    padding: 30px 15px;
   }
 
-  .watch h1,
-  .watch p,
-  .watch h3 {
-    position: static !important;
-    margin: 10px 0;
+  .watch h1, .watch h3 {
+    font-size: 1.8rem;
   }
 
-  .container h1 {
-    font-size: 1.5rem;
-    text-align: center;
+  .watch h1:last-of-type {
+    font-size: 2rem;
   }
 
-  .btn {
+  .lern {
     font-size: 1rem;
-  }
-
-  img {
-    width: 100%;
-    height: auto;
-  }
-
-  .col-6 {
-    width: 100%;
-  }
-
-  .btn-primary {
-    position: static !important;
-    display: block;
-    margin: 10px auto;
-  }
-
-  p {
-    position: static !important;
-    text-align: center;
   }
 }
 
-/* Phones (max-width: 480px) */
+/* Mobile (480px and below) */
 @media (max-width: 480px) {
+  .watch h1 {
+    font-size: 1.5rem;
+  }
+
+  .watch p {
+    font-size: 1rem;
+  }
+
+  .watch h3 {
+    font-size: 1.2rem;
+  }
+
+  .watch h1:last-of-type {
+    font-size: 1.8rem;
+  }
+
+  .offer {
+    font-size: 1.6rem;
+  }
+
   .card-body h2 {
     font-size: 1.2rem;
   }
 
   .lern {
     font-size: 0.9rem;
-    width: 100%;
-  }
-
-  .watch {
-    font-size: 0.9rem;
-  }
-
-  .container {
-    padding-left: 10px;
-    padding-right: 10px;
   }
 }
- 

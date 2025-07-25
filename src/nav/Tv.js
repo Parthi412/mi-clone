@@ -2,6 +2,8 @@ import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import Nav from './Nav';
+
 import {  Navigation } from 'swiper/modules';
 function Tv() {
     const mobile = [{
@@ -41,6 +43,7 @@ function Tv() {
     }]
     return (
         <div>
+            <Nav></Nav>
             <hr></hr>
             <div >
                
@@ -71,7 +74,7 @@ function Tv() {
                                     <br></br>
                                     <br></br>
                                     <h4>{bag.price}</h4>
-                                    <button style={{ position: "relative", top: "-15px", left: "270px" }} className='btn btn-dark'>Buy now</button>
+                                    <button style={{ position: "relative", top: "-15px",  }} className='btn btn-dark'>Buy now</button>
 
 
                                 </div>
@@ -99,7 +102,7 @@ function Tv() {
                                         <br></br>
                                         <br></br>
                                         <h4>{bag.price}</h4>
-                                        <button style={{ position: "relative", top: "-15px", left: "270px" }} className='btn btn-dark'>Buy now</button>
+                                        <button style={{ position: "relative", top: "-15px", }} className='btn btn-dark'>Buy now</button>
 
 
                                     </div>

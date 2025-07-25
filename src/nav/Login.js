@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Login.css';
+import Nav from './Nav';
+
 
 function Login() {
   const [user, setuser] = useState({
@@ -28,6 +30,8 @@ function Login() {
   }
 
   return (
+    <div>
+      <Nav></Nav>
     <div style={{ backgroundColor: "gray", height: "100vh", width: "99vw" }}>
       <div className='container'>
         <hr></hr>
@@ -83,6 +87,7 @@ function Login() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }

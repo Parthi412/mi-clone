@@ -3,6 +3,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import './Mob.css'
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import Nav from './Nav';
+
 // import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { addCart} from './Crete';
@@ -42,7 +44,28 @@ function Mobile() {
         title: "Redmi Note 14 Pro 5",
         price: "15,000",
         img: "https://i03.appmifile.com/201_item_in/17/12/2024/0321927c81d71d28eb19b7ac43b4c86d.png?thumb=1&w=500&f=webp&q=85"
-    }]
+    },]
+    const offer=[{
+         id: "7",
+        title: "Xiamoi",
+        price: "18,000",
+        img: "https://i03.appmifile.com/979_item_in/17/12/2024/d065316191be257a48fb7516d78e6662.png?thumb=1&w=500&f=webp&q=85"
+
+    },{
+           id: "8",
+        title: "Poco",
+        price: "18,000",
+        img: "https://i03.appmifile.com/29_item_in/06/01/2025/95acf558eae2c8a52b1cd7d79207f3b7.png?thumb=1&w=500&f=webp&q=85"
+    }
+    ,{
+          id: "9",
+        title: "Xiamoi",
+        price: "18,000",
+        img: "https://i03.appmifile.com/942_item_in/17/12/2024/35ce3d67c8df46482bcf534c9339e578.png?thumb=1&w=500&f=webp&q=85"
+
+
+    }
+]
 // const MobileData=useSelector((state)=>state.cart.CartItem)
 const dis=useDispatch()
 
@@ -54,8 +77,8 @@ const add=(bag)=>{
 
     return (
         <div>
+            <Nav></Nav>
             <hr></hr>
-            
                 <div className='container-fluid'>
                     <div className='row'>
                         <div className='col'>
@@ -66,12 +89,26 @@ const add=(bag)=>{
                         </div>
                     </div>
                 </div>
+                                    <br></br>
+
+                    <br></br>
+
+                    <br></br>
+
                 
-                <section>
-                     <div className='container-fluid'>
-                    <h1 style={{textAlign: "center",color:"black",fontSize:"40px"}}>Xiaomi</h1>
+                <section>                    <br></br>
+                    <br></br>
+                    <br></br>
+
+                     <div className='container-fluid' >
+
+                    <h1 style={{textAlign: "center",color:"black",fontSize:"40px"}}>Xiaomi's Mobile</h1>
+                                        <br></br>
+                    <br></br>
+                    <br></br>
+
                 </div>
-                    <div className='container-fluid '>
+                    <div className='container-fluid' style={{position:"relative",bottom:"70px"}}>
                         <div className='row'>
                             {mobile.map((bag) => (
                                 <div className='col-6  lap' key={bag.id} style={{ marginRight: "20px" }}>
@@ -79,8 +116,9 @@ const add=(bag)=>{
                                     <img style={{ borderRadius: "140px", height: "400px", width: "400px", position: "relative", left: "110px" }} src={bag.img} alt='mobile'></img>
                                     <br></br>
                                     <br></br>
+                                    <h4 style={{backgroundColor:"black",position:"relative",bottom:"510px",width:"250px",color:"white"}} className='hot'>Hot Sales</h4>
                                     <h4>{bag.price}</h4>
-                                    <button style={{ position: "relative", top: "-15px", left: "270px" }} onClick={()=>add(bag)} className='btn btn-dark'>Buy now</button>
+                                    <button style={{ position: "relative", top: "-15px",  }} onClick={()=>add(bag)} className='btn btn-dark'>Buy now</button>
 
 
                                 </div>
@@ -89,14 +127,20 @@ const add=(bag)=>{
                             }
                         </div>
                     </div>
-                 
+                                     <br></br>
+                    <br></br>
+
                   
                 </section>
-                <div className='container-fluid'>
-                    <h1 style={{textAlign: "center",color:"black",fontSize:"40px"}}>Redmi</h1>
+                <div className='container-fluid' style={{position:"relative",bottom:"40px"}}>
+                    <h1 style={{textAlign: "center",color:"black",fontSize:"40px"}}>Redmi's Mobile</h1>
+                                        <br></br>
+
+                    <br></br>
+
                 </div>
                 <section>
-                    <div className='container-fluid' >
+                    <div className='container-fluid' style={{position:"relative",bottom:"70px"}} >
                         <div className='row'>
                             {
                                 redmi.map((bag) => (
@@ -105,16 +149,60 @@ const add=(bag)=>{
                                         <img style={{ borderRadius: "140px", height: "400px", width: "400px", position: "relative", left: "110px" }} src={bag.img} alt='mobile'></img>
                                         <br></br>
                                         <br></br>
+                                                                            <h4 style={{backgroundColor:"black",position:"relative",bottom:"510px",width:"250px",color:"white"}} className='hot'>Hot Sales</h4>
+
                                         <h4>{bag.price}</h4>
-                                        <button style={{ position: "relative", top: "-15px", left: "270px" }} onClick={()=>add(bag)} className='btn btn-dark'>Buy now</button>
+                                        <button style={{ position: "relative", top: "-15px", }} onClick={()=>add(bag)} className='btn btn-dark'>Buy now</button>
                                     </div>
                                 ))
                             }
                         </div>
                     </div>
                 </section>
-                <br></br>
-                <br></br>
+                <section>
+                      <div className='container-fluid'>
+                        <h1 style={{textAlign:"center",color:"black",fontSize:"40px"}}>Upcoming Mobile's</h1>
+                    <div className='row'>
+                        <div className='col'>
+                            <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+                                <SwiperSlide><img src="https://i03.appmifile.com/257_operator_in/23/06/2025/b81ec141843167ad852cc645c0446e65.png?thumb=1&w=2560&f=webp&q=85" alt='mobile'></img></SwiperSlide>
+                                <SwiperSlide><img src='https://i03.appmifile.com/866_operator_in/16/04/2025/c8edb2200ae77d6c3f5b8940ad2eb484.png?thumb=1&w=2560&f=webp&q=85' alt='mobile'></img></SwiperSlide>
+                            </Swiper>
+                        </div>
+                                            <br></br>
+                    <br></br>
+
+                    </div>
+                </div>
+                </section>
+                <section>
+                                        <br></br>
+
+                    <br></br>
+                    <br></br>
+                    <br></br>
+
+                    <div className='container-fluid' style={{position:"relative",bottom:"70px"}} >
+                        <h1 style={{color:"black",fontSize:"40px",textAlign:"center"}}>Offer's Zone</h1>
+                        <div className='row'>
+                            {
+                                offer.map((bag) => (
+                                    <div className='col lap' key={bag.id} style={{ marginRight: "20px" }}>
+                                        <h1 style={{ color: "white", textAlign: "center", marginTop: "100px" }}>{bag.tittle}</h1>
+                                        <img style={{ borderRadius: "140px", height: "400px", width: "400px", position: "relative", left: "110px" }} src={bag.img} alt='mobile'></img>
+                                        <br></br>
+                                        <br></br>
+                                                                            <h4 style={{backgroundColor:"black",position:"relative",bottom:"510px",width:"250px",color:"white"}} className='hot'>Hot Sales</h4>
+                                        <h4 >{bag.price}</h4>
+
+                                        <button style={{ position: "relative", top: "-15px", }} onClick={()=>add(bag)} className='btn btn-dark'>Buy now</button>
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </div>
+                </section>
+               
         </div>
     )
 }

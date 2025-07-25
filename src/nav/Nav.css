@@ -81,7 +81,6 @@
 
     
 }
-/* Make search input full-width on small screens */
 @media (max-width: 768px) {
   .search .in {
     width: 100%;
@@ -115,7 +114,6 @@
   }
 }
 
-/* Very small devices */
 @media (max-width: 480px) {
   .navbar .one {
     font-size: 0.9rem;

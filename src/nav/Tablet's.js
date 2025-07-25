@@ -1,6 +1,8 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css/pagination';
+import Nav from './Nav';
+
 import 'swiper/css/navigation';
 import {  Navigation } from 'swiper/modules';
 function Tablte() {
@@ -41,6 +43,7 @@ function Tablte() {
     }]
     return (
         <div>
+            <Nav></Nav>
             <hr></hr>
             <div >
                
@@ -68,12 +71,13 @@ function Tablte() {
                         <div className='row'>
                             {mobile.map((bag) => (
                                 <div className='col-6  lap' key={bag.id} style={{ marginRight: "20px" }}>
-                                    <h1 style={{ color: "white", textAlign: "center", marginTop: "100px", }}>{bag.tittle}</h1>
+                                    <h1 style={{ color: "black", textAlign: "center", marginTop: "80px", }}>{bag.tittle}</h1>
                                     <img style={{ borderRadius: "140px", height: "400px", width: "400px", position: "relative", left: "110px" }} src={bag.img} alt='tab'></img>
-                                    <br></br>
-                                    <br></br>
+                                
+                                    <h4 style={{backgroundColor:"black",position:"relative",bottom:"530px",width:"250px",color:"white"}} className='hot'>Hot Sales</h4>
+
                                     <h4>{bag.price}</h4>
-                                    <button style={{ position: "relative", top: "-15px", left: "270px" }} className='btn btn-dark'>Buy now</button>
+                                    <button style={{ position: "relative", bottom:'40px', left: "270p/" }} className='btn btn-dark'>Buy now</button>
 
 
                                 </div>
@@ -85,23 +89,25 @@ function Tablte() {
                   
 
                 </section>
-                <div className='container-fluid'>
+                <div className='container-fluid mt-5'>
                     <h1 style={{ textAlign: "center",color:"black",fontSize:"40px"}}>Redmi</h1>
 
 
                 </div>
                 <section>
-                    <div className='container-fluid' >
+                    <div className='container-fluid mt-5' >
                         <div className='row'>
                             {
                                 redmi.map((bag) => (
                                     <div className='col lap' key={bag.id} style={{ marginRight: "20px" }}>
-                                        <h1 style={{ color: "white", textAlign: "center", marginTop: "100px" }}>{bag.tittle}</h1>
+                                        <h1 style={{ color: "black", textAlign: "center", marginTop: "100px" }}>{bag.tittle}</h1>
                                         <img style={{ borderRadius: "140px", height: "400px", width: "400px", position: "relative", left: "110px" }} src={bag.img} alt='mobile'></img>
                                         <br></br>
                                         <br></br>
+                                        <h4 style={{backgroundColor:"black",position:"relative",bottom:"570px",width:"250px",color:"white"}} className='hot'>Hot Sales</h4>
+
                                         <h4>{bag.price}</h4>
-                                        <button style={{ position: "relative", top: "-15px", left: "270px" }} className='btn btn-dark'>Buy now</button>
+                                        <button style={{ position: "relative",bottom:"50px", }} className='btn btn-dark'>Buy now</button>
 
 
                                     </div>
@@ -111,6 +117,20 @@ function Tablte() {
 
                         </div>
                     </div>
+                </section>
+                <section>
+                    <h1 style={{textAlign:"center",marginTop:"20px"}}>Upcoming offer's</h1>
+                     <div className='container-fluid mt-5'>
+                    <div className='row'>
+                        <div className='col'>
+                            <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+                                <SwiperSlide><img src='https://i03.appmifile.com/598_operator_in/23/06/2025/ea787bcfa397c93cd6913204b08b6082.jpg?thumb=1&w=2560&f=webp&q=85' alt='tab'></img></SwiperSlide>
+                                <SwiperSlide><img src='https://i03.appmifile.com/863_operator_in/02/06/2025/7143eae2ae4b02fa93663d4bfbdf4147.png?thumb=1&w=2560&f=webp&q=85' alt="tab"></img></SwiperSlide>
+                            </Swiper>
+                        </div>
+                    </div>
+                </div>
+
                 </section>
 
             </div>

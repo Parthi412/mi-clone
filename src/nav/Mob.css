@@ -1,87 +1,130 @@
-#app {
+/* Base Reset */
+html, body {
   height: 100%;
-}
-html,
-body {
-  position: relative;
-  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f9f9f9;
 }
 
-
+/* Swiper container */
 .swiper {
   width: 100%;
-  height: 100%;
+  height: auto;
+  padding: 20px 0;
 }
 
 .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #444;
-
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease-in-out;
+}
+
+.swiper-slide:hover {
+  transform: scale(1.02);
 }
 
 .swiper-slide img {
-  display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
+  border-radius: 12px;
   object-fit: cover;
 }
 
-.lap{
-    height: 650px;
-    width: 600px;
-    background-color: rgb(186, 185, 185);
+/* Product Card */
+.lap {
+  width: 100%;
+  max-width: 500px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  text-align: center;
+  margin: 0 auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-img {
-  max-width: 100%;
+.lap:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 32px rgba(0, 0, 0, 0.15);
+}
+
+.lap img {
+  width: 100%;
+  max-width: 300px;
   height: auto;
+  object-fit: contain;
+  border-radius: 14px;
+  margin-bottom: 20px;
 }
 
-/* Tablet & smaller */
+/* Product Info */
+.lap h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.lap h4 {
+  font-size: 1.1rem;
+  color: #777;
+  margin-bottom: 12px;
+}
+
+.lap button {
+  padding: 10px 24px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.lap button:hover {
+  background-color: #0056b3;
+}
+
+/* Hot Label */
+.hot {
+  display: inline-block;
+  padding: 8px 16px;
+  background: black;
+  color: white;
+  font-size: 14px;
+  border-radius: 20px;
+  font-weight: bold;
+  animation: pulse 3s infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes pulse {
+  0% { background-color: black; color: white; }
+  25% { background-color: orange; color: black; }
+  50% { background-color: red; color: white; }
+  75% { background-color: blue; color: white; }
+  100% { background-color: gold; color: black; }
+}
+
+/* Responsive Grid Fix */
 @media (max-width: 992px) {
   .lap {
-    width: 100%;
-    margin: auto;
-    margin-bottom: 40px;
-    text-align: center;
+    padding: 20px;
+    max-width: 90%;
   }
 
   .lap img {
-    width: 300px !important;
-    height: auto !important;
-    position: static !important;
+    max-width: 240px;
   }
 
-  .lap h2,
-  .lap h1 {
-    margin-top: 40px !important;
-    font-size: 1.5rem;
-  }
-
-  .lap button {
-    position: static !important;
-    margin-top: 10px;
-  }
-  .mySwiper {
-    visibility: hidden;
-  
-  }
-}
-
-/* Mobile */
-@media (max-width: 576px) {
-  .lap img {
-    width: 220px !important;
-    border-radius: 100px;
-  }
-
-  .lap h2,
-  .lap h1 {
-    font-size: 1.2rem;
+  .lap h2 {
+    font-size: 1.4rem;
   }
 
   .lap h4 {
@@ -89,12 +132,35 @@ img {
   }
 
   .lap button {
-    font-size: 0.9rem;
     width: 100%;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .lap {
+    padding: 16px;
   }
 
-  .container-fluid {
-    padding-left: 10px;
-    padding-right: 10px;
+  .lap img {
+    max-width: 200px;
+  }
+
+  .lap h2 {
+    font-size: 1.2rem;
+  }
+
+  .lap h4 {
+    font-size: 0.95rem;
+  }
+
+  .lap button {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+
+  .hot {
+    font-size: 12px;
+    padding: 6px 12px;
   }
 }

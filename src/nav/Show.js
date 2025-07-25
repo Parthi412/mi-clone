@@ -1,6 +1,8 @@
 import React from 'react'
 import { useSelector, useDispatch } from "react-redux";
 import { deleteTocart } from "./Crete";
+import Nav from './Nav';
+
 
 function Show() {
     const MobileData = useSelector((state) => state.cart.CartItem);
@@ -12,6 +14,7 @@ function Show() {
 
     return (
         <div>
+          <Nav></Nav>
           <br>
           </br>
           <br>
